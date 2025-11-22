@@ -30,6 +30,11 @@ const Dashboard = () => {
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome! {user.displayName}</Text>
       <Text style={styles.userEmail}>{user.email}</Text>
+      <TouchableOpacity
+        style={styles.formsButton}
+        onPress={() => router.push("/forms")}
+        >Forms!
+      </TouchableOpacity>
       <TouchableOpacity style={styles.logOutButton} onPress={handleLogOut}>
         <Text style={styles.logoutText}>Log Out</Text>
       </TouchableOpacity>
@@ -65,6 +70,14 @@ const styles = StyleSheet.create({
   },
   logOutButton: {
     backgroundColor: "#ef4444",
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+  },
+  formsButton: {
+    backgroundColor: "#3c00ffff",
+    color: "#ffffff",
+    margin: 10,
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 8,
